@@ -67,6 +67,15 @@
 .compact-table th:first-child {
   text-align: left;
 }
+
+.balance-sheet-table tr td {
+  padding: 16px 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.balance-sheet-table .border-bottom {
+  border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+}
 /* Improve table number readability */
 /*.table td {
   text-align: right;

@@ -164,62 +164,118 @@
     <!-- Balance Sheet Section -->
     <div class="container-fluid mt-4" [hidden]="activeSection !== 'balance'">
       <h4 class="mb-4">Tesla, Inc. Balance Sheet</h4>
-      <p class="text-muted">Balance sheet data will be displayed here.</p>
+      <div class="table-responsive">
+        <table class="table table-borderless balance-sheet-table">
+          <tbody>
+            <tr class="border-bottom">
+              <td class="text-muted">Total Assets</td>
+              <td class="text-end fw-medium">82338000000</td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="text-muted">Current Assets</td>
+              <td class="text-end fw-medium">40917000000</td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="text-muted">Total Cash</td>
+              <td class="text-end fw-medium text-primary">22185000000</td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="text-muted">Property & equipment</td>
+              <td class="text-end fw-medium">36635000000</td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="text-muted">Intangible Assets</td>
+              <td class="text-end fw-medium">593000000</td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="text-muted">Long-Term Debt</td>
+              <td class="text-end fw-medium">1597000000</td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="text-muted">Total Debt</td>
+              <td class="text-end fw-medium">7142000000</td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="text-muted">Total Liabilities</td>
+              <td class="text-end fw-medium">36440000000</td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="text-muted">Current Liabilities</td>
+              <td class="text-end fw-medium">26709000000</td>
+            </tr>
+            <tr class="border-bottom">
+              <td class="text-muted">Long-Term Debt</td>
+              <td class="text-end fw-medium">1597000000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <!-- Cashflow Statement Section -->
+    <!-- Cashflow Statement Section (with formatted numbers) -->
     <div class="container-fluid mt-4" [hidden]="activeSection !== 'cashflow'">
       <h4 class="mb-4">Tesla, Inc. Cashflow Statement</h4>
-      <p class="text-muted">Cashflow statement data will be displayed here.</p>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover table-sm compact-table">
+          <thead class="table-light">
+            <tr>
+              <th>DATE</th>
+              <th>OPERATING CASHFLOW</th>
+              <th>INVESTING CASHFLOW</th>
+              <th>FINANCING CASHFLOW</th>
+              <th>CASH AT END OF PERIOD</th>
+              <th>CAPEX</th>
+              <th>ISSUANCE OF STOCK</th>
+              <th>FREE CASH FLOW</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2023-06-30</td>
+              <td>87.58B</td>
+              <td>-22.68B</td>
+              <td>-43.94B</td>
+              <td>34.70B</td>
+              <td>-28.11B</td>
+              <td>1.87B</td>
+              <td>59.48B</td>
+            </tr>
+            <tr>
+              <td>2022-06-30</td>
+              <td>89.04B</td>
+              <td>-30.31B</td>
+              <td>-58.88B</td>
+              <td>13.93B</td>
+              <td>-23.89B</td>
+              <td>1.84B</td>
+              <td>65.15B</td>
+            </tr>
+            <tr>
+              <td>2021-06-30</td>
+              <td>76.74B</td>
+              <td>-27.58B</td>
+              <td>-48.49B</td>
+              <td>14.22B</td>
+              <td>-20.62B</td>
+              <td>1.69B</td>
+              <td>56.12B</td>
+            </tr>
+            <tr>
+              <td>2020-06-30</td>
+              <td>60.68B</td>
+              <td>-12.22B</td>
+              <td>-46.03B</td>
+              <td>13.58B</td>
+              <td>-15.44B</td>
+              <td>1.34B</td>
+              <td>45.23B</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
 
-<style>
-/* Your existing styles */
-.sidebar-link {
-  padding: 8px 0;
-  transition: all 0.2s;
-}
 
-.sidebar-link:hover, .sidebar-link.active {
-  color: #000 !important;
-}
 
-.sidebar-link.active {
-  position: relative;
-}
-
-.sidebar-link.active:after {
-  content: '';
-  position: absolute;
-  right: -4px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 24px;
-  background-color: #6c757d;
-}
-
-/* New styles for compact table */
-.compact-table {
-  font-size: 0.85rem;
-}
-
-.compact-table th,
-.compact-table td {
-  padding: 0.4rem 0.5rem;
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-
-.compact-table th {
-  font-size: 0.75rem;
-}
-
-.compact-table td:first-child,
-.compact-table th:first-child {
-  text-align: left;
-}
-</style>
