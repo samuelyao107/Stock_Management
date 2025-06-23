@@ -1,0 +1,225 @@
+<div class="d-flex">
+  <!-- Sidebar -->
+  <div class="sidebar shadow-sm bg-white p-4" style="min-width: 250px; height: 100vh;">
+    <div class="d-flex flex-column">
+      <a href="#" class="sidebar-link d-flex align-items-center mb-3 text-decoration-none text-secondary" (click)="showSection('profile'); $event.preventDefault()">
+        <i class="bi bi-house-door me-3"></i>
+        <span class="text-uppercase fw-medium">COMPANY PROFILE</span>
+      </a>
+      <a href="#" class="sidebar-link d-flex align-items-center mb-3 text-decoration-none text-secondary active" (click)="showSection('income'); $event.preventDefault()">
+        <i class="bi bi-file-earmark-text me-3"></i>
+        <span class="text-uppercase fw-medium">INCOME STATEMENT</span>
+      </a>
+      <a href="#" class="sidebar-link d-flex align-items-center mb-3 text-decoration-none text-secondary" (click)="showSection('balance'); $event.preventDefault()">
+        <i class="bi bi-grid me-3"></i>
+        <span class="text-uppercase fw-medium">BALANCE SHEET</span>
+      </a>
+      <a href="#" class="sidebar-link d-flex align-items-center mb-3 text-decoration-none text-secondary" (click)="showSection('cashflow'); $event.preventDefault()">
+        <i class="bi bi-cash-coin me-3"></i>
+        <span class="text-uppercase fw-medium">CASHFLOW STATEMENT</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-grow-1">
+    <!-- Company Profile Section -->
+    <div class="container-fluid mt-4" [hidden]="activeSection !== 'profile'">
+      <!-- Company Info Cards -->
+      <div class="row mb-4 g-3">
+        <div class="col-md-3">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="text-uppercase small text-muted mb-1">COMPANY NAME</div>
+              <div class="fs-4 fw-bold">Tesla, Inc.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="text-uppercase small text-muted mb-1">PRICE</div>
+              <div class="fs-4 fw-bold">209.98</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="text-uppercase small text-muted mb-1">SECTOR</div>
+              <div class="fs-4 fw-bold">Consumer Cyclical</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="text-uppercase small text-muted mb-1">MARKET CAP</div>
+              <div class="fs-4 fw-bold text-primary">667509608161</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Annual Reports -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-success">10K - TSLA - 2023</button>
+            <button class="btn btn-success">10K - TSLA - 2022</button>
+            <button class="btn btn-success">10K - TSLA - 2021</button>
+            <button class="btn btn-success">10K - TSLA - 2020</button>
+            <button class="btn btn-success">10K - TSLA - 2019</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company Description -->
+      <div class="row">
+        <div class="col-12">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <p class="text-muted mb-0">
+                Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles and energy generation and storage systems in the United States, China, and internationally. It operates in two segments, Automotive, and Energy Generation and Storage. The Automotive segment offers electric vehicles, as well as sells automotive regulatory credits; and non-warranty after-sales vehicle, used vehicles, retail merchandise, and vehicle insurance services. This segment also provides sedans and sport utility vehicles through direct and used vehicle sales, a network of Tesla Superchargers, and in-app upgrades; purchase financing and leasing services; services for electric vehicles through its company-owned service locations and Tesla mobile service technicians; and vehicle limited warranties and extended service plans. The Energy Generation and Storage segment engages in the design, manufacture, installation, sale, and leasing of solar energy generation and energy storage products, and related services to residential, commercial, and industrial customers and utilities through its website, stores, and galleries, as well as through a network of channel partners; and provision of service and repairs to its energy product customers, including under warranty, as well as various financing options to its solar customers. The company was formerly known as Tesla Motors, Inc. and changed its name to Tesla, Inc. in February 2017. Tesla, Inc. was incorporated in 2003 and is headquartered in Austin, Texas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Income Statement Section -->
+    <div class="container-fluid mt-4" [hidden]="activeSection !== 'income'">
+      <h4 class="mb-4">Tesla, Inc. Income Statement</h4>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover table-sm compact-table">
+          <thead class="table-light">
+            <tr>
+              <th>DATE</th>
+              <th>REVENUE</th>
+              <th>COST OF REV</th>
+              <th>DEPREC</th>
+              <th>OP INCOME</th>
+              <th>INCOME BT</th>
+              <th>NET INCOME</th>
+              <th>NET INC RATIO</th>
+              <th>EPS</th>
+              <th>EPS DIL</th>
+              <th>GROSS PROF</th>
+              <th>OP INC RATIO</th>
+              <th>TAX RATIO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2023-06-30</td>
+              <td>211.92B</td>
+              <td>65.86B</td>
+              <td>13.86B</td>
+              <td>88.52B</td>
+              <td>89.31B</td>
+              <td>72.36B</td>
+              <td>0.341</td>
+              <td>9.72</td>
+              <td>9.68</td>
+              <td>0.689</td>
+              <td>0.418</td>
+              <td>0.421</td>
+            </tr>
+            <tr>
+              <td>2022-06-30</td>
+              <td>198.27B</td>
+              <td>62.65B</td>
+              <td>14.46B</td>
+              <td>83.38B</td>
+              <td>83.72B</td>
+              <td>72.74B</td>
+              <td>0.367</td>
+              <td>9.70</td>
+              <td>9.65</td>
+              <td>0.684</td>
+              <td>0.421</td>
+              <td>0.422</td>
+            </tr>
+            <tr>
+              <td>2021-06-30</td>
+              <td>190.00B</td>
+              <td>58.00B</td>
+              <td>11.30B</td>
+              <td>80.19B</td>
+              <td>71.19B</td>
+              <td>61.97B</td>
+              <td>0.326</td>
+              <td>9.18</td>
+              <td>9.05</td>
+              <td>0.699</td>
+              <td>0.416</td>
+              <td>0.421</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Balance Sheet Section -->
+    <div class="container-fluid mt-4" [hidden]="activeSection !== 'balance'">
+      <h4 class="mb-4">Tesla, Inc. Balance Sheet</h4>
+      <p class="text-muted">Balance sheet data will be displayed here.</p>
+    </div>
+
+    <!-- Cashflow Statement Section -->
+    <div class="container-fluid mt-4" [hidden]="activeSection !== 'cashflow'">
+      <h4 class="mb-4">Tesla, Inc. Cashflow Statement</h4>
+      <p class="text-muted">Cashflow statement data will be displayed here.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Your existing styles */
+.sidebar-link {
+  padding: 8px 0;
+  transition: all 0.2s;
+}
+
+.sidebar-link:hover, .sidebar-link.active {
+  color: #000 !important;
+}
+
+.sidebar-link.active {
+  position: relative;
+}
+
+.sidebar-link.active:after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 24px;
+  background-color: #6c757d;
+}
+
+/* New styles for compact table */
+.compact-table {
+  font-size: 0.85rem;
+}
+
+.compact-table th,
+.compact-table td {
+  padding: 0.4rem 0.5rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.compact-table th {
+  font-size: 0.75rem;
+}
+
+.compact-table td:first-child,
+.compact-table th:first-child {
+  text-align: left;
+}
+</style>

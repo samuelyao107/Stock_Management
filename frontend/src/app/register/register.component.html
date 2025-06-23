@@ -1,0 +1,93 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card shadow">
+        <div class="card-body p-5">
+          <h2 class="text-center mb-4">Create an Account</h2>
+          
+          <form (ngSubmit)="onSubmit()">
+            <!-- Name inputs -->
+            <div class="row mb-3">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <label for="firstName" class="form-label">First Name</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  id="firstName"
+                  required
+                  name="firstName"
+                  [(ngModel)]="registerData.firstName">
+              </div>
+              
+              <div class="col-md-6">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  id="lastName"
+                  required
+                  name="lastName"
+                  [(ngModel)]="registerData.lastName">
+              </div>
+            </div>
+            
+            <!-- Email input -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input 
+                type="email" 
+                class="form-control" 
+                id="email" 
+                placeholder="name@example.com"
+                required
+                name="email"
+                [(ngModel)]="registerData.email">
+              <div class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            
+            <!-- Password inputs -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input 
+                type="password" 
+                class="form-control" 
+                id="password"
+                required
+                name="password"
+                [(ngModel)]="registerData.password">
+            </div>
+            
+            <div class="mb-4">
+              <label for="confirmPassword" class="form-label">Confirm Password</label>
+              <input 
+                type="password" 
+                class="form-control" 
+                id="confirmPassword"
+                required
+                name="confirmPassword"
+                [(ngModel)]="registerData.confirmPassword">
+            </div>
+            
+            <!-- Terms checkbox -->
+            <div class="mb-4 form-check">
+              <input type="checkbox" class="form-check-input" id="termsAgree" name="termsAgree" [(ngModel)]="registerData.termsAgree" required>
+              <label class="form-check-label" for="termsAgree">
+                I agree to the <a href="#" class="text-decoration-none">Terms of Service</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>
+              </label>
+            </div>
+            
+            <!-- Register button -->
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary">Create Account</button>
+            </div>
+            
+            <!-- Login link -->
+            <div class="text-center mt-4">
+              <p class="mb-0">Already have an account? <a routerLink="/login" class="text-decoration-none">Login</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
